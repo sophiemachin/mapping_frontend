@@ -4,7 +4,7 @@ import Map from './Map'
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <h1>Sophie's mapping stuff</h1>
       <Map />
     </div>

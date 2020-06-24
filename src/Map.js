@@ -3,7 +3,7 @@ import React from 'react'
 
 class DataInput extends React.Component {
   render() {
-    return <div style={{marginTop:'40px'}}>
+    return <div>
 
       <iframe
         title="map"
@@ -11,8 +11,8 @@ class DataInput extends React.Component {
         src="http://127.0.0.1:5000/"
         frameBorder="0"
         style={{
-          width: '800px',
-          height : '400px',
+          width: '100%',
+          height : '800px',
         }}
       >
       </iframe>
