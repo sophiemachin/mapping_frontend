@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import { Routing } from './Routing'
+import StateSetup from './StateSetup'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 
@@ -14,7 +14,7 @@ ReactDOM.render(
         </Toolbar>
     </AppBar>
     <div style={{marginTop: '100px'}}>
-      <Routing />
+      <StateSetup />
     </div>
 
   </React.StrictMode>,

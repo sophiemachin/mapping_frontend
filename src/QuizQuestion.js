@@ -43,10 +43,11 @@ export const QuizQuestion  = (props) => {
   const { id } = props.match.params
   const { history } = props
 
-  const [value, setValue] = React.useState('female');
+  const [answered, setAnswered] = React.useState(false);
 
   const handleChange = (event) => {
-    setValue(event.target.value);
+    setAnswered(true)
+    props.updateGuess(id, event.target.value)
   };
 
   const handleForwardNav = () => {
@@ -67,8 +68,9 @@ export const QuizQuestion  = (props) => {
     }
   };
 
+  const value = props.values[id] ? props.values[id] : false
 
-    return <div className={classes.root}>
+  return <div className={classes.root}>
     <div className={classes.content}>
       <Card className={classes.card} variant="outlined">
         <CardHeader subheader={'Question ' + id} />
@@ -77,7 +79,7 @@ export const QuizQuestion  = (props) => {
           <div className={classes.options}>
             <RadioGroup name="gender1" value={value} onChange={handleChange}>
               {questions[id].options.map(option =>
-              <FCL value={option} control={<Radio />} label={option} />
+              <FCL value={option} control={<Radio />} label={option} key={option}/>
               )}
             </RadioGroup>
           </div>
@@ -89,7 +91,11 @@ export const QuizQuestion  = (props) => {
               Back
             </Button>
 
-            <Button variant="outlined" onClick={handleForwardNav}>
+            <Button
+              variant="outlined"
+              onClick={handleForwardNav}
+              disabled={!answered}
+            >
               {id === '5' ? 'Submit' : 'Next' }
             </Button>
           </div>

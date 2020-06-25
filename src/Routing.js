@@ -46,11 +46,12 @@ const Notfound  = () => <SkeletonPage page='Not found'/>;
 const Explore  = () => <SkeletonPage page='Explore'/>;
 
 
-export const Routing = () => <Router>
+export const Routing = (props) => <Router>
       <Switch>
         <Route path="/" exact component={App} />
         <Route path="/quiz" exact component={QuizStart} />
-        <Route path="/quiz/:id" exact component={QuizQuestion} />
+        <Route path="/quiz/:id" exact render={(params) =>
+            <QuizQuestion {...props} {...params} />} />
         <Route path="/results" exact component={Results} />
         <Route path="/explore" exact component={Explore} />
         <Route component={Notfound} />

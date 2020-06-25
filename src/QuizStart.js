@@ -54,7 +54,7 @@ export const QuizStart  = (props) => {
         <CardContent className={classes.cardContent} >
           <T variant='h4' className={classes.title}>This quiz is going to probe your mind</T>
           <div className={classes.options}>
-            <T variant='subtitle 2' className={classes.title}>Joke, it's just for fun</T>
+            <T variant='subtitle2' className={classes.title}>Joke, it's just for fun</T>
           </div>
 
           <Divider />
