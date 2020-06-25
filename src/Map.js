@@ -8,7 +8,7 @@ class DataInput extends React.Component {
       <iframe
         title="map"
         id="theFrame"
-        src="http://127.0.0.1:5000/template"
+        src="http://127.0.0.1:5000"
         frameBorder="0"
         style={{
           width: '100%',

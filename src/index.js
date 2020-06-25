@@ -3,9 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { Routing } from './Routing'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
 
 ReactDOM.render(
   <React.StrictMode>
+    <AppBar>
+        <Toolbar>
+          <h1>Sophie's mapping stuff</h1>
+        </Toolbar>
+      </AppBar>
     <Routing />
   </React.StrictMode>,
   document.getElementById('root')
