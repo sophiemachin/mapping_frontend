@@ -52,7 +52,7 @@ export const QuizQuestion  = (props) => {
 
   const handleForwardNav = () => {
     const next = parseInt(id) + 1
-    if (next === 6) {
+    if (next === 3) {
       history.push(`/results`)
     } else {
       history.push(`/quiz/${parseInt(id) + 1}`)

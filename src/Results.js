@@ -1,6 +1,7 @@
 import React from 'react'
 import { Typography as T } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
+import { regions, weightings } from './Questions'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -9,23 +10,47 @@ const useStyles = makeStyles(theme => ({
 
 }))
 
-const Results = () => {
-    const classes = useStyles();
-    return <div className={classes.root}>
+const Results = (props) => {
+  const classes = useStyles();
+
+   let initState = {
+    NE: 0,
+    NW: 0,
+    YH: 0,
+    EM: 0,
+    WM: 0,
+    E:  0,
+    L:  0,
+    SE: 0,
+    SW: 0,
+    NI: 0,
+    S:  0,
+    W:  0,
+  }
+
+  for (let qId in props.values) {
+    let word = props.values[qId]
+    for (let region in weightings[word]){
+      let weighting = weightings[word][region]
+      initState[region] += weighting
+    }
+  }
+
+  var items = Object.keys(initState).map(function(key) {
+  return [key, initState[key]];
+  });
+
+  items.sort(function(first, second) {
+  return second[1] - first[1];
+  });
+
+
+  return <div className={classes.root}>
       <T variant='h4' align='center'>Results</T>
       <T variant='body1'  align='center'>Best guess at where you live</T>
 
-      <iframe
-        title="map"
-        id="theFrame"
-        src="http://127.0.0.1:5000"
-        frameBorder="0"
-        style={{
-          width: '100%',
-          height : '800px',
-        }}
-      >
-      </iframe>
+      {regions[items[0][0]]}
+
       </div>
 }
 

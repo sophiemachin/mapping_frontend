@@ -52,7 +52,8 @@ export const Routing = (props) => <Router>
         <Route path="/quiz" exact component={QuizStart} />
         <Route path="/quiz/:id" exact render={(params) =>
             <QuizQuestion {...props} {...params} />} />
-        <Route path="/results" exact component={Results} />
+        <Route path="/results" exact render={(params) =>
+            <Results {...props} {...params} />} />
         <Route path="/explore" exact component={Explore} />
         <Route component={Notfound} />
       </Switch>
