@@ -4,7 +4,7 @@ import Map from './Map'
 
 function App() {
   return (
-    <div style={{marginTop: '100px'}}>
+    <div>
       <Map />
     </div>
   );

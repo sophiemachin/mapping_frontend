@@ -12,8 +12,11 @@ ReactDOM.render(
         <Toolbar>
           <h1>Sophie's mapping stuff</h1>
         </Toolbar>
-      </AppBar>
-    <Routing />
+    </AppBar>
+    <div style={{marginTop: '100px'}}>
+      <Routing />
+    </div>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
