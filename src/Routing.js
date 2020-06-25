@@ -3,9 +3,10 @@ import App from './App'
 import React from 'react'
 
 import { makeStyles } from '@material-ui/core/styles';
-import {Card, CardActionArea, CardHeader, Grid} from '@material-ui/core';
+import {Card, CardHeader, Grid} from '@material-ui/core';
 import { QuizQuestion } from './QuizQuestion'
 import { QuizStart } from './QuizStart'
+import Results from './Results'
 
 
 const useStyles = makeStyles(theme => ({
@@ -33,20 +34,15 @@ function SkeletonPage({page}) {
   return <div className={classes.root}>
     <div className={classes.content}>
       <Card className={classes.card}>
-        <CardActionArea>
           <CardHeader title={page} />
             <Grid container justify="center" alignItems="center">
-
             </Grid>
-
-        </CardActionArea>
       </Card>
     </div>
   </div>
 }
 
 const Notfound  = () => <SkeletonPage page='Not found'/>;
-const Results  = () => <SkeletonPage page='Results'/>;
 const Explore  = () => <SkeletonPage page='Explore'/>;
 
 
