@@ -3,6 +3,7 @@ import { Button, Card, CardContent, CardHeader, Divider, FormControlLabel as FCL
   Radio, RadioGroup, Typography as T } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import Pagination from '@material-ui/lab/Pagination';
+import questions from './Questions'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -72,12 +73,12 @@ export const QuizQuestion  = (props) => {
       <Card className={classes.card} variant="outlined">
         <CardHeader subheader={'Question ' + id} />
         <CardContent className={classes.cardContent} >
-          <T variant='h4' className={classes.title}>What does path rhyme with?</T>
+          <T variant='h4' className={classes.title}>{questions[id].question}</T>
           <div className={classes.options}>
             <RadioGroup name="gender1" value={value} onChange={handleChange}>
-              <FCL value="hearth" control={<Radio />} label="Hearth" />
-              <FCL value="math" control={<Radio />} label="Hath" />
-              <FCL value="other" control={<Radio />} label="Other" />
+              {questions[id].options.map(option =>
+              <FCL value={option} control={<Radio />} label={option} />
+              )}
             </RadioGroup>
           </div>
 
