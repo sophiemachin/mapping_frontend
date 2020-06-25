@@ -40,6 +40,21 @@ export const regions = {
 }
 
 
+export const phrases = {
+  NE: 'Whey-Ayee',
+  NW: "Ehhm that's boss",
+  YH: 'Proper reet good',
+  EM: 'Ay up miduck',
+  WM: 'West Midlands',
+  E: 'Orl roite, my luvver?',
+  L: "I can 'ardly Adam and Eve it",
+  SE: 'Hello',
+  SW: 'Properrr job',
+  NI: 'Now is the hour for a power shower',
+  S: 'Och aye',
+  W: "That's lush that is",
+}
+
 export const regionList = [
   'NE', 'NW', 'YH', 'EM', 'WM', 'E', 'L', 'SE', 'SW', 'NI', 'S', 'W'
 ]

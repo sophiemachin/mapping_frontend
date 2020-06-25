@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography as T } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
-import { regions, weightings } from './Questions'
+import { regions, weightings, phrases } from './Questions'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -48,8 +48,8 @@ const Results = (props) => {
   return <div className={classes.root}>
       <T variant='h4' align='center'>Results</T>
       <T variant='body1'  align='center'>Best guess at where you live</T>
-
-      {regions[items[0][0]]}
+      <p>{regions[items[0][0]]}</p>
+      <p>{phrases[items[0][0]]}</p>
 
       </div>
 }
