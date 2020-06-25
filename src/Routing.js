@@ -5,6 +5,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import {Card, CardActionArea, CardHeader, Grid} from '@material-ui/core';
 import { QuizQuestion } from './QuizQuestion'
+import { QuizStart } from './QuizStart'
 
 
 const useStyles = makeStyles(theme => ({
@@ -45,7 +46,6 @@ function SkeletonPage({page}) {
 }
 
 const Notfound  = () => <SkeletonPage page='Not found'/>;
-const Quiz  = () => <SkeletonPage page="Quiz: let's go!"/>;
 const Results  = () => <SkeletonPage page='Results'/>;
 const Explore  = () => <SkeletonPage page='Explore'/>;
 
@@ -53,7 +53,7 @@ const Explore  = () => <SkeletonPage page='Explore'/>;
 export const Routing = () => <Router>
       <Switch>
         <Route path="/" exact component={App} />
-        <Route path="/quiz" exact component={Quiz} />
+        <Route path="/quiz" exact component={QuizStart} />
         <Route path="/quiz/:id" exact component={QuizQuestion} />
         <Route path="/results" exact component={Results} />
         <Route path="/explore" exact component={Explore} />
