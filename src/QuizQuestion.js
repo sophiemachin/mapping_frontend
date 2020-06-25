@@ -40,12 +40,32 @@ const useStyles = makeStyles(theme => ({
 export const QuizQuestion  = (props) => {
   const classes = useStyles();
   const { id } = props.match.params
+  const { history } = props
 
   const [value, setValue] = React.useState('female');
 
   const handleChange = (event) => {
     setValue(event.target.value);
   };
+
+  const handleForwardNav = () => {
+    const next = parseInt(id) + 1
+    if (next === 6) {
+      history.push(`/results`)
+    } else {
+      history.push(`/quiz/${parseInt(id) + 1}`)
+    }
+  };
+
+  const handleBackNav = () => {
+    const next = parseInt(id) - 1
+    if (next === 0) {
+      history.push(`/quiz`)
+    } else {
+      history.push(`/quiz/${parseInt(id) - 1}`)
+    }
+  };
+
 
     return <div className={classes.root}>
     <div className={classes.content}>
@@ -64,12 +84,12 @@ export const QuizQuestion  = (props) => {
           <Divider />
 
           <div className={classes.nav}>
-            <Button variant="outlined">
-              Next
+            <Button variant="outlined" onClick={handleBackNav}>
+              Back
             </Button>
 
-            <Button variant="outlined">
-              Back
+            <Button variant="outlined" onClick={handleForwardNav}>
+              {id === '5' ? 'Submit' : 'Next' }
             </Button>
           </div>
         </CardContent>
@@ -79,3 +99,4 @@ export const QuizQuestion  = (props) => {
     <Pagination count={5} page={parseInt(id)}/>
   </div>
 }
+

@@ -45,7 +45,7 @@ function SkeletonPage({page}) {
 }
 
 const Notfound  = () => <SkeletonPage page='Not found'/>;
-const Quiz  = () => <SkeletonPage page='Quiz'/>;
+const Quiz  = () => <SkeletonPage page="Quiz: let's go!"/>;
 const Results  = () => <SkeletonPage page='Results'/>;
 const Explore  = () => <SkeletonPage page='Explore'/>;
 
