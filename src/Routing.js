@@ -4,6 +4,7 @@ import React from 'react'
 
 import { makeStyles } from '@material-ui/core/styles';
 import {Card, CardActionArea, CardHeader, Grid} from '@material-ui/core';
+import { QuizQuestion } from './QuizQuestion'
 
 
 const useStyles = makeStyles(theme => ({
@@ -53,6 +54,7 @@ export const Routing = () => <Router>
       <Switch>
         <Route path="/" exact component={App} />
         <Route path="/quiz" exact component={Quiz} />
+        <Route path="/quiz/:id" exact component={QuizQuestion} />
         <Route path="/results" exact component={Results} />
         <Route path="/explore" exact component={Explore} />
         <Route component={Notfound} />
