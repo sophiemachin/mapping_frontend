@@ -10,10 +10,11 @@ import background from './images/background.jpg'
 ReactDOM.render(
   <React.StrictMode>
     <div style={{
-      backgroundImage: `url(${background})`,
-      backgroundSize: '100vw 100vh',
+      backgroundColor: '#ebe7e4',
+      height: '93vh',
+      paddingTop: '5vh'
     }}>
-    <div style={{paddingTop: '5vh'}}>
+
       <AppBar>
         <Toolbar>
           <h1>Mapping sandbox frontend</h1>
@@ -22,7 +23,6 @@ ReactDOM.render(
 
       <StateSetup />
 
-    </div>
     </div>
 
   </React.StrictMode>,

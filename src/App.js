@@ -11,7 +11,7 @@ import world from './images/world.jpg'
 const useStyles = makeStyles(theme => ({
   main: {
     maxWidth: '95vw',
-    height: '84.5vh',
+    // height: '84.5vh',
     padding: '40px',
   },
   media: {
