@@ -10,7 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     <AppBar>
         <Toolbar>
-          <h1>Sophie's mapping stuff</h1>
+          <h1>Mapping sandbox frontend</h1>
         </Toolbar>
     </AppBar>
     <div style={{marginTop: '100px'}}>
