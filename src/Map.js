@@ -1,7 +1,6 @@
 import React from 'react'
 
-
-class DataInput extends React.Component {
+class Map extends React.Component {
   render() {
     return <div>
 
@@ -22,4 +21,4 @@ class DataInput extends React.Component {
   }
 }
 
-export default DataInput
+export default Map
