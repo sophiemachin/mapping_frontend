@@ -7,6 +7,7 @@ import {Card, CardHeader, Grid} from '@material-ui/core';
 import { QuizQuestion } from './QuizQuestion'
 import { QuizStart } from './QuizStart'
 import Results from './Results'
+import Map from './Map'
 
 
 const useStyles = makeStyles(theme => ({
@@ -49,6 +50,7 @@ const Explore  = () => <SkeletonPage page='Explore'/>;
 export const Routing = (props) => <Router>
       <Switch>
         <Route path="/" exact component={App} />
+        <Route path="/map" exact component={Map} />
         <Route path="/quiz" exact component={QuizStart} />
         <Route path="/quiz/:id" exact render={(params) =>
             <QuizQuestion {...props} {...params} />} />
