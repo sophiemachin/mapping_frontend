@@ -5,16 +5,24 @@ import * as serviceWorker from './serviceWorker';
 import StateSetup from './StateSetup'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
+import background from './images/background.jpg'
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppBar>
+    <div style={{
+      backgroundImage: `url(${background})`,
+      backgroundSize: '100% 130vh',
+      paddingTop: '60px'
+    }}
+    >
+      <AppBar>
         <Toolbar>
           <h1>Mapping sandbox frontend</h1>
         </Toolbar>
-    </AppBar>
-    <div style={{marginTop: '100px'}}>
+      </AppBar>
+
       <StateSetup />
+
     </div>
 
   </React.StrictMode>,

@@ -11,18 +11,22 @@ import world from './images/world.jpg'
 const useStyles = makeStyles(theme => ({
   main: {
     maxWidth: '95vw',
+    height: '100vh',
     padding: '40px',
   },
   media: {
     paddingTop: '40%',
   },
+  introText : {
+    padding: '10px'
+  }
 }))
 
 function App() {
   const classes = useStyles();
   return (
     <div className={classes.main}>
-      <T>sdfsdf</T>
+      <T className={classes.introText}>Mapping sandbox homepage</T>
 
       <Grid container spacing={6} >
         <Grid item xs={12} sm={6}>
