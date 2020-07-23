@@ -37,7 +37,7 @@ function App() {
 
             </CardContent>
             <CardActions>
-              <Button variant="contained" href="#/quiz">Go to quiz</Button>
+              <Button href="#/quiz">Go to quiz</Button>
             </CardActions>
           </Card>
         </Grid>
@@ -54,7 +54,7 @@ function App() {
 
             </CardContent>
             <CardActions>
-              <Button variant="contained" href="#/quiz">Go to map</Button>
+              <Button href="#/map">Go to map</Button>
             </CardActions>
           </Card>
         </Grid>
