@@ -11,10 +11,9 @@ ReactDOM.render(
   <React.StrictMode>
     <div style={{
       backgroundImage: `url(${background})`,
-      backgroundSize: '100% 130vh',
-      paddingTop: '60px'
-    }}
-    >
+      backgroundSize: '100vw 100vh',
+    }}>
+    <div style={{paddingTop: '5vh'}}>
       <AppBar>
         <Toolbar>
           <h1>Mapping sandbox frontend</h1>
@@ -23,6 +22,7 @@ ReactDOM.render(
 
       <StateSetup />
 
+    </div>
     </div>
 
   </React.StrictMode>,
