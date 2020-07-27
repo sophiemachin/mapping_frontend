@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import StateSetup from './StateSetup'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
-import background from './images/background.jpg'
+import Link from '@material-ui/core/Link'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,7 +17,11 @@ ReactDOM.render(
 
       <AppBar>
         <Toolbar>
-          <h1>Mapping sandbox frontend</h1>
+            <Link href={'/'} import color="inherit" variant='h4'
+                  style={{textDecoration:'none'}}>
+              Mapping sandbox frontend
+            </Link>
+
         </Toolbar>
       </AppBar>
 
