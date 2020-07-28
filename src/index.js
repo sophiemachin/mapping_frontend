@@ -6,29 +6,32 @@ import StateSetup from './StateSetup'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Link from '@material-ui/core/Link'
+import { theme } from './styles.js'
+import { MuiThemeProvider } from '@material-ui/core/styles'
 
 ReactDOM.render(
   <React.StrictMode>
-    <div style={{
-      backgroundColor: '#ebe7e4',
-      height: '93vh',
-      paddingTop: '5vh'
-    }}>
+    <MuiThemeProvider theme={theme}>
+      <div style={{
+        backgroundColor: 'rgb(44,44,44)',
+        height: '93vh',
+        paddingTop: '5vh'
+      }}>
 
-      <AppBar>
-        <Toolbar>
-            <Link href={'/'} import color="inherit" variant='h4'
-                  style={{textDecoration:'none'}}>
-              Mapping sandbox frontend
-            </Link>
+        <AppBar>
+          <Toolbar>
+              <Link href={'/'} import color="textPrimary" variant='h4'
+                    style={{textDecoration:'none'}}>
+                Mapping sandbox frontend
+              </Link>
 
-        </Toolbar>
-      </AppBar>
+          </Toolbar>
+        </AppBar>
 
-      <StateSetup />
+        <StateSetup />
 
-    </div>
-
+      </div>
+  </MuiThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
