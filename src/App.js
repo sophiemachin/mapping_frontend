@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Typography as T } from '@material-ui/core'
-import { Button, Card, CardActions, CardContent, CardMedia, Grid, makeStyles
+import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, makeStyles
 } from '@material-ui/core'
 
 import quiz from './images/quiz.jpg'
@@ -17,16 +16,13 @@ const useStyles = makeStyles(theme => ({
   media: {
     paddingTop: '40%',
   },
-  introText : {
-    paddingBottom: '20px'
-  }
 }))
 
 function App() {
   const classes = useStyles();
   return (
     <div className={classes.main}>
-      <T className={classes.introText}>Mapping sandbox homepage</T>
+    <Container>
 
       <Grid container spacing={6} >
         <Grid item xs={12} sm={6}>
@@ -64,7 +60,7 @@ function App() {
         </Grid>
 
       </Grid>
-
+    </Container>
     </div>
   );
 }
