@@ -9,4 +9,9 @@ export const theme = createMuiTheme({
       primary : 'rgb(230,230,230)',
     }
   },
+  typography: {
+    body1: {
+      color: 'rgb(220,220,220)',
+    }
+  }
 })
