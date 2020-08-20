@@ -10,6 +10,11 @@ const useStyles = theme => ({
     display: 'flex',
     flexDirection: 'column',
   },
+  map: {
+    height: '400px',
+    width: '600px',
+    margin: '50px'
+  }
 })
 
 
@@ -32,7 +37,7 @@ class MapPres extends React.Component {
    console.log(classes)
 
   return <div className={classes.root}>
-    <div id="map" style={{height: '400px', width: '600px', margin: '50px'}}/>
+    <div id="map" className={classes.map}/>
     </div>
   }
 }
