@@ -1,24 +1,42 @@
 import React from 'react'
+import { withStyles } from '@material-ui/core'
+import L from 'leaflet'
 
-class Map extends React.Component {
+const useStyles = theme => ({
+  root: {
+    margin: theme.spacing(2),
+    justifyContent: 'center',
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+})
+
+
+class MapPres extends React.Component {
+
+  componentDidMount() {
+    this.map();
+  }
+
+  map() {
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+  }
+
   render() {
-    return <div>
+   const { classes }  = this.props;
+   console.log(classes)
 
-      <iframe
-        title="map"
-        id="theFrame"
-        src="http://127.0.0.1:5000"
-        frameBorder="0"
-        style={{
-          width: '100%',
-          height : '800px',
-        }}
-      >
-      </iframe>
-
-
+  return <div className={classes.root}>
+    <div id="map" style={{height: '400px', width: '600px', margin: '50px'}}/>
     </div>
   }
 }
+
+const Map = withStyles(useStyles)(MapPres)
 
 export default Map
