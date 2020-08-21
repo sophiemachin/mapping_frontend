@@ -11,8 +11,8 @@ const useStyles = theme => ({
     flexDirection: 'column',
   },
   map: {
-    height: '400px',
-    width: '600px',
+    height: '600px',
+    width: '800px',
     margin: '50px'
   }
 })
@@ -25,7 +25,7 @@ class MapPres extends React.Component {
   }
 
   map() {
-    var map = L.map('map').setView([51.505, -0.09], 13);
+    var map = L.map('map').setView([55, -2], 5);
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
